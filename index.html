@@ -12,22 +12,24 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
             min-height: 100vh;
             overflow-x: hidden;
         }
 
-        /* Floating animation for background elements */
+        /* Tech grid background pattern */
         .floating-bg {
             position: fixed;
-            width: 100px;
-            height: 100px;
-            background: rgba(59, 130, 246, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
+            width: 200px;
+            height: 200px;
+            background: 
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 8s ease-in-out infinite;
             z-index: -1;
         }
 
@@ -68,19 +70,21 @@
         }
 
         .logo {
-            font-size: 3.5rem;
-            font-weight: bold;
+            font-size: 2.8rem;
+            font-weight: 700;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: pulse 2s infinite;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             cursor: pointer;
-            transition: transform 0.3s ease;
-            color: #ffffff;
+            transition: all 0.3s ease;
+            letter-spacing: -0.02em;
         }
 
         .logo:hover {
-            transform: scale(1.05);
-            color: #dbeafe;
+            transform: scale(1.02);
+            filter: brightness(1.1);
         }
 
         @keyframes pulse {
@@ -89,11 +93,13 @@
         }
 
         .tagline {
-            font-size: 1.3rem;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            font-weight: 500;
             margin-bottom: 30px;
             animation: fadeInUp 1s ease-out 0.5s both;
-            color: #dbeafe;
+            color: #94a3b8;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
         @keyframes slideInDown {
@@ -119,14 +125,16 @@
         }
 
         .main-content {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
             margin: 20px 0;
             animation: slideInUp 1s ease-out 0.8s both;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .main-content::before {
@@ -136,7 +144,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
             animation: shimmer 3s infinite;
         }
 
@@ -152,10 +160,12 @@
         }
 
         .welcome-title {
-            font-size: 2.5rem;
-            color: #1e3a8a;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 24px;
             animation: bounceIn 1s ease-out 1.4s both;
+            letter-spacing: -0.02em;
         }
 
         @keyframes bounceIn {
@@ -176,12 +186,13 @@
         }
 
         .welcome-text {
-            font-size: 1.2rem;
-            color: #475569;
-            max-width: 600px;
+            font-size: 1.1rem;
+            color: #64748b;
+            max-width: 700px;
             margin: 0 auto;
-            line-height: 1.8;
+            line-height: 1.7;
             animation: fadeIn 1s ease-out 1.6s both;
+            font-weight: 400;
         }
 
         @keyframes fadeIn {
@@ -190,16 +201,17 @@
         }
 
         .idtech-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
-            border-radius: 15px;
-            padding: 30px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+            border-radius: 12px;
+            padding: 40px;
             text-align: center;
-            margin: 30px 0;
+            margin: 40px 0;
             color: white;
             animation: slideInLeft 1s ease-out 1.8s both;
             position: relative;
             overflow: hidden;
-            border: 2px solid #dbeafe;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
         .idtech-section::before {
@@ -209,7 +221,7 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(219, 234, 254, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(233, 213, 255, 0.1) 0%, transparent 70%);
             animation: rotate 10s linear infinite;
         }
 
@@ -239,8 +251,8 @@
         }
 
         @keyframes glow {
-            from { text-shadow: 0 0 5px rgba(219, 234, 254, 0.5); }
-            to { text-shadow: 0 0 20px rgba(219, 234, 254, 0.8), 0 0 30px rgba(219, 234, 254, 0.6); }
+            from { text-shadow: 0 0 5px rgba(233, 213, 255, 0.5); }
+            to { text-shadow: 0 0 20px rgba(233, 213, 255, 0.8), 0 0 30px rgba(233, 213, 255, 0.6); }
         }
 
         .idtech-description {
@@ -249,24 +261,24 @@
             opacity: 0.9;
             position: relative;
             z-index: 1;
-            color: #dbeafe;
+            color: #e9d5ff;
         }
 
         .idtech-link {
             display: inline-block;
-            background: #ffffff;
-            color: #1e3a8a;
-            padding: 15px 30px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: white;
+            padding: 16px 32px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
             position: relative;
             z-index: 1;
-            animation: bounce 2s infinite;
-            border: 2px solid #dbeafe;
+            border: none;
+            letter-spacing: 0.025em;
         }
 
         .idtech-link:hover {
@@ -280,6 +292,176 @@
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
+        }
+
+        /* Tools Section Styles */
+        .tools-section {
+            margin: 40px 0;
+            animation: fadeIn 1s ease-out 2.2s both;
+        }
+
+        .tools-title {
+            font-size: 2.2rem;
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .tools-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            border-radius: 2px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .tools-grid-special {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            .tools-grid-special {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tool-category {
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        }
+
+        .tool-category:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-shrink: 0;
+        }
+
+        .category-icon {
+            font-size: 2.2rem;
+            margin-right: 18px;
+            color: #1e3a8a;
+        }
+
+        .category-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+
+        .tool-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex-grow: 1;
+        }
+
+        .tool-link {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .tool-link:hover::before {
+            left: 100%;
+        }
+
+        .tool-link:hover {
+            transform: translateX(8px);
+            border-color: #3b82f6;
+            color: #1e3a8a;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.1);
+        }
+
+        .tool-link-icon {
+            font-size: 1.3rem;
+            margin-right: 15px;
+            color: #3b82f6;
+            flex-shrink: 0;
+        }
+
+        .tool-link-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .tool-link-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .tool-link-url {
+            font-size: 0.85rem;
+            color: #64748b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .external-icon {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-left: 10px;
+            flex-shrink: 0;
         }
 
         .features-grid {
@@ -361,12 +543,60 @@
             line-height: 1.6;
         }
 
+        .feature-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card-link:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-link-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: #3b82f6;
+        }
+
+        .feature-card:hover .feature-link-indicator {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
         footer {
             text-align: center;
             padding: 30px 0;
             color: white;
             opacity: 0.8;
             animation: fadeIn 1s ease-out 2.6s both;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .contact-info .email {
+            font-size: 1.1rem;
+            margin: 0;
+            color: #dbeafe;
+        }
+
+        .contact-info .email a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .contact-info .email a:hover {
+            color: #3b82f6;
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
         }
 
         .social-links {
@@ -450,8 +680,13 @@
                 padding: 20px;
             }
             
-            .features-grid {
+            .features-grid,
+            .tools-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .tools-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -483,7 +718,7 @@
             </div>
 
             <div class="idtech-section">
-                <h2 class="idtech-title">🚀 Featured Partner: ID TECH</h2>
+                <h2 class="idtech-title">Featured Partner: ID TECH</h2>
                 <p class="idtech-description">
                     Explore world-class integrated payment solutions for any industry and any environment. 
                     ID TECH builds reliable hardware and software services for the most demanding applications.
@@ -493,41 +728,324 @@
                 </a>
             </div>
 
+            <!-- Frequently Used Tools Section -->
+            <div class="tools-section">
+                <h2 class="tools-title">Frequently Used Tools</h2>
+                
+                <div class="tools-grid">
+                    <!-- Production Solutions -->
+                    <div class="tool-category">
+                        <div class="category-header">
+                            <div class="category-title">Production Solutions</div>
+                        </div>
+                        <div class="tool-links">
+                            <a href="https://idtechproducts.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">ID TECH Main Website</div>
+                                    <div class="tool-link-url">idtechproducts.com</div>
+                                </div>
+                            </a>
+                            <a href="https://idtechproducts.atlassian.net/wiki/spaces/KB/overview" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">ID TECH Knowledge Base</div>
+                                    <div class="tool-link-url">idtechproducts.atlassian.net/wiki</div>
+                                </div>
+                            </a>
+                            <a href="https://rdm.idtechproducts.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">RDM Production</div>
+                                    <div class="tool-link-url">rdm.idtechproducts.com</div>
+                                </div>
+                            </a>
+                            <a href="https://portal.itsco.net/v2" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Merchant Central</div>
+                                    <div class="tool-link-url">portal.itsco.net/v2</div>
+                                </div>
+                            </a>
+                            <a href="https://marketplace.idtechproducts.com/#/otp" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Shopping Portal</div>
+                                    <div class="tool-link-url">marketplace.idtechproducts.com</div>
+                                </div>
+                            </a>
+                            <a href="https://portal.idtechproducts.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Status Page</div>
+                                    <div class="tool-link-url">portal.idtechproducts.com</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Business & Design -->
+                    <div class="tool-category">
+                        <div class="category-header">
+                            <div class="category-title">Business & Design</div>
+                        </div>
+                        <div class="tool-links">
+                            <a href="https://idtechproducts.atlassian.net/jira/dashboards/10817" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Tech Support Dashboard</div>
+                                    <div class="tool-link-url">idtechproducts.atlassian.net/jira/dashboards/10817</div>
+                                </div>
+                            </a>
+                            <a href="https://www.timeanddate.com/worldclock/meeting.html" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">WorldClock</div>
+                                    <div class="tool-link-url">timeanddate.com/worldclock/meeting</div>
+                                </div>
+                            </a>
+                            <a href="https://www.figma.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Figma</div>
+                                    <div class="tool-link-url">figma.com</div>
+                                </div>
+                            </a>
+                            <a href="https://www.canva.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Canva</div>
+                                    <div class="tool-link-url">canva.com</div>
+                                </div>
+                            </a>
+                            <a href="https://mermaid.js.org/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Mermaid</div>
+                                    <div class="tool-link-url">mermaid.js.org</div>
+                                </div>
+                            </a>
+                            <a href="https://outlook.office365.com/mail/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Office 365</div>
+                                    <div class="tool-link-url">outlook.office365.com/mail</div>
+                                </div>
+                            </a>
+                            <a href="https://workforcenow.adp.com/theme/index.html#/home" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">ADP</div>
+                                    <div class="tool-link-url">workforcenow.adp.com</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-grid-special">
+                    <!-- Development & Testing -->
+                    <div class="tool-category">
+                        <div class="category-header">
+                            <div class="category-title">Development & Testing</div>
+                        </div>
+                        <div class="tool-links">
+                            <a href="https://uat.rdm.idtechproducts.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">RDM UAT Environment</div>
+                                    <div class="tool-link-url">uat.rdm.idtechproducts.com</div>
+                                </div>
+                            </a>
+                            <a href="https://admin.dev.rki.idtechproducts.com/login" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">RKI Dev Portal</div>
+                                    <div class="tool-link-url">admin.dev.rki.idtechproducts.com</div>
+                                </div>
+                            </a>
+                            <a href="https://portal-uat.itscocloud.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">PAE Portal (UAT)</div>
+                                    <div class="tool-link-url">portal-uat.itscocloud.com</div>
+                                </div>
+                            </a>
+                            <a href="https://mail.tm/en/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Temp Mail</div>
+                                    <div class="tool-link-url">mail.tm/en</div>
+                                </div>
+                            </a>
+                            <a href="https://yopmail.com/en/wm" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Yopmail</div>
+                                    <div class="tool-link-url">yopmail.com/en/wm</div>
+                                </div>
+                            </a>
+                            <a href="https://apps-d.docusign.com/send/home" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">DocuSign</div>
+                                    <div class="tool-link-url">apps-d.docusign.com/send/home</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Backoffice -->
+                    <div class="tool-category">
+                        <div class="category-header">
+                            <div class="category-title">Backoffice</div>
+                        </div>
+                        <div class="tool-links">
+                            <a href="https://app.bom.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Arena BOM</div>
+                                    <div class="tool-link-url">app.bom.com</div>
+                                </div>
+                            </a>
+                            <a href="https://idtechproducts.atlassian.net/jira/software/c/projects/SOFD/boards/128/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Device Management & Enablement</div>
+                                    <div class="tool-link-url">idtechproducts.atlassian.net/jira</div>
+                                </div>
+                            </a>
+                            <a href="https://idtechproducts.atlassian.net/wiki/spaces/PMH/pages/71458633/Remote+Device+Management+RDM" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Software Product Documentation</div>
+                                    <div class="tool-link-url">idtechproducts.atlassian.net/wiki</div>
+                                </div>
+                            </a>
+                            <a href="https://adminportal.idtechproducts.com/login.asp" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">ID TECH Admin Portal</div>
+                                    <div class="tool-link-url">adminportal.idtechproducts.com</div>
+                                </div>
+                            </a>
+                            <a href="https://trello.com/b/vV7DNpsv/id-tech?completedInviteSignup=1" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">CRM Integration</div>
+                                    <div class="tool-link-url">trello.com/b/vV7DNpsv/id-tech</div>
+                                </div>
+                            </a>
+                            <a href="https://login.salesforce.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Salesforce Marketing Cloud</div>
+                                    <div class="tool-link-url">login.salesforce.com</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-grid">
+
+                    <!-- 3rd Party Integrations -->
+                    <div class="tool-category" id="integrations-section">
+                        <div class="category-header">
+                            <div class="category-title">3rd Party Integrations</div>
+                        </div>
+                        <div class="tool-links">
+                            <a href="https://support.bigcommerce.com/s/?language=en_US" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">E-Commerce</div>
+                                    <div class="tool-link-url">support.bigcommerce.com</div>
+                                </div>
+                            </a>
+                            <a href="https://docs.worldpay.com/apis/launchpad/merchant-boarding/api-specification" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">WorldPay LaunchPad Integration</div>
+                                    <div class="tool-link-url">docs.worldpay.com/apis/launchpad</div>
+                                </div>
+                            </a>
+                            <a href="https://docs.worldpay.com/apis/launchpad/merchant-boarding" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Merchant Boarding for ISVs</div>
+                                    <div class="tool-link-url">docs.worldpay.com/apis/launchpad</div>
+                                </div>
+                            </a>
+                            <a href="https://www.iriscrm.com/api/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">IRIS Open APIs</div>
+                                    <div class="tool-link-url">iriscrm.com/api</div>
+                                </div>
+                            </a>
+                            <a href="https://developer.elavon.com/alt-all-docs" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Elavon Integration</div>
+                                    <div class="tool-link-url">developer.elavon.com/alt-all-docs</div>
+                                </div>
+                            </a>
+                            <a href="https://editor.swagger.io/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Swagger Editor</div>
+                                    <div class="tool-link-url">editor.swagger.io</div>
+                                </div>
+                            </a>
+                            <a href="https://web.postman.co/workspace" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">Postman</div>
+                                    <div class="tool-link-url">web.postman.co/workspace</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Governance, Risk & Compliance -->
+                    <div class="tool-category" id="governance-section">
+                        <div class="category-header">
+                            <div class="category-title">Governance, Risk & Compliance</div>
+                        </div>
+                        <div class="tool-links">
+                            <a href="https://listings.pcisecuritystandards.org/assessors_and_solutions/pin_transaction_devices?agree=true" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">PCI PTS</div>
+                                    <div class="tool-link-url">listings.pcisecuritystandards.org</div>
+                                </div>
+                            </a>
+                            <a href="https://www.worldpay.com/en-GB/products/safer-payments" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">PCI DSS</div>
+                                    <div class="tool-link-url">worldpay.com/en-GB/products/safer-payments</div>
+                                </div>
+                            </a>
+                            <a href="https://www.emvco.com/" target="_blank" class="tool-link">
+                                <div class="tool-link-text">
+                                    <div class="tool-link-title">EMVCo</div>
+                                    <div class="tool-link-url">emvco.com</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💳</div>
-                    <h3 class="feature-title">Payment Solutions</h3>
-                    <p class="feature-text">
-                        Cutting-edge payment technology for modern businesses, including contactless readers, 
-                        mobile payment devices, and secure transaction processing.
-                    </p>
-                </div>
+                <a href="https://portal-uat.itscocloud.com/" target="_blank" class="feature-card-link">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Payment Solutions</h3>
+                        <p class="feature-text">
+                            Cutting-edge payment technology for modern businesses, including contactless readers, 
+                            mobile payment devices, and secure transaction processing.
+                        </p>
+                    </div>
+                </a>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3 class="feature-title">Security First</h3>
-                    <p class="feature-text">
-                        Enterprise-grade security with EMV certification and advanced encryption 
-                        to protect your business and customers.
-                    </p>
-                </div>
+                <a href="https://www.worldpay.com/en-GB/products/safer-payments" target="_blank" class="feature-card-link">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Security First</h3>
+                        <p class="feature-text">
+                            Enterprise-grade security with EMV certification and advanced encryption 
+                            to protect your business and customers.
+                        </p>
+                    </div>
+                </a>
 
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3 class="feature-title">Innovation</h3>
-                    <p class="feature-text">
-                        Stay ahead with the latest technology trends and solutions designed 
-                        for tomorrow's payment landscape.
-                    </p>
-                </div>
+                <a href="https://www.iriscrm.com/api/" target="_blank" class="feature-card-link">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Innovation</h3>
+                        <p class="feature-text">
+                            Stay ahead with the latest technology trends and solutions designed 
+                            for tomorrow's payment landscape.
+                        </p>
+                    </div>
+                </a>
             </div>
         </div>
 
         <footer>
+            <div class="contact-info">
+                <p class="email"><a href="mailto:daisy.li@idtechproducts.com">daisy.li@idtechproducts.com</a></p>
+            </div>
             <div class="social-links">
-                <a href="#" title="LinkedIn">📱</a>
-                <a href="#" title="Twitter">🐦</a>
-                <a href="#" title="Email">✉️</a>
+                <a href="https://www.linkedin.com/in/daisy-x-li/" target="_blank" title="LinkedIn">LinkedIn</a>
+                <a href="https://x.com/daisyxlee1" target="_blank" title="Twitter">Twitter</a>
+                <a href="https://www.youtube.com/@daisyxli" target="_blank" title="YouTube">YouTube</a>
+                <a href="mailto:daisy.li@idtechproducts.com" title="Email">Email</a>
             </div>
             <p>&copy; 2024 DaisyLee.com. All rights reserved.</p>
         </footer>
@@ -549,7 +1067,7 @@
         }, observerOptions);
 
         // Add scroll animation to elements
-        document.querySelectorAll('.feature-card, .idtech-section').forEach(el => {
+        document.querySelectorAll('.feature-card, .idtech-section, .tool-category').forEach(el => {
             el.classList.add('scroll-animate');
             observer.observe(el);
         });
@@ -562,7 +1080,7 @@
             }, 600);
         });
 
-        // Feature card hover sound effect (visual feedback)
+        // Feature card hover effects
         document.querySelectorAll('.feature-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -573,6 +1091,20 @@
             });
         });
 
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
         // ID TECH link special effect
         document.querySelector('.idtech-link').addEventListener('mouseenter', function() {
             this.style.animation = 'bounce 0.5s ease';
@@ -580,6 +1112,21 @@
 
         document.querySelector('.idtech-link').addEventListener('mouseleave', function() {
             this.style.animation = 'bounce 2s infinite';
+        });
+
+        // Tool link hover effects
+        document.querySelectorAll('.tool-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                if (!this.style.opacity || this.style.opacity !== '0.6') {
+                    this.style.transform = 'translateX(8px)';
+                }
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                if (!this.style.opacity || this.style.opacity !== '0.6') {
+                    this.style.transform = 'translateX(0)';
+                }
+            });
         });
     </script>
 </body>
