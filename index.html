@@ -200,77 +200,92 @@
             to { opacity: 1; }
         }
 
-        @keyframes slideInUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
         .idtech-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
             border-radius: 12px;
-            padding: 32px;
-            margin: 32px 0;
-            color: white;
+            padding: 40px;
             text-align: center;
-            animation: fadeIn 1s ease-out 1.8s both;
+            margin: 40px 0;
+            color: white;
+            animation: slideInLeft 1s ease-out 1.8s both;
             position: relative;
             overflow: hidden;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
         .idtech-section::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-            opacity: 0.3;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(233, 213, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
         }
 
-        .idtech-content {
-            position: relative;
-            z-index: 1;
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
 
         .idtech-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            animation: glow 2s ease-in-out infinite alternate;
+            color: #ffffff;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px rgba(233, 213, 255, 0.5); }
+            to { text-shadow: 0 0 20px rgba(233, 213, 255, 0.8), 0 0 30px rgba(233, 213, 255, 0.6); }
         }
 
         .idtech-description {
-            font-size: 1rem;
-            margin-bottom: 24px;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
             opacity: 0.9;
-            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+            color: #e9d5ff;
         }
 
         .idtech-link {
             display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 16px 32px;
             text-decoration: none;
-            font-weight: 500;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            animation: bounce 2s infinite;
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+            position: relative;
+            z-index: 1;
+            border: none;
+            letter-spacing: 0.025em;
         }
 
         .idtech-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #f8fafc;
+            color: #1e40af;
         }
 
         @keyframes bounce {
@@ -279,137 +294,279 @@
             60% { transform: translateY(-5px); }
         }
 
+        /* Tools Section Styles */
         .tools-section {
-            margin: 48px 0;
+            margin: 40px 0;
+            animation: fadeIn 1s ease-out 2.2s both;
         }
 
-        .section-title {
+        .tools-title {
             font-size: 2.2rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 32px;
+            color: #1e3a8a;
             text-align: center;
-            animation: fadeIn 1s ease-out 2s both;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .tools-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            border-radius: 2px;
         }
 
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 24px;
-            margin-bottom: 32px;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
         }
 
-        .tools-grid.special-layout {
+        .tools-grid-special {
+            display: grid;
             grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 1200px) {
+            .tools-grid-special {
+                grid-template-columns: 1fr;
+            }
         }
 
         .tool-category {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            background: #f8fafc;
+            border-radius: 15px;
+            padding: 30px;
             border: 1px solid #e2e8f0;
-            animation: fadeIn 1s ease-out 2.2s both;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
         }
 
         .tool-category:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.15);
+            border-color: #3b82f6;
         }
 
         .category-header {
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            flex-shrink: 0;
+        }
+
+        .category-icon {
+            font-size: 2.2rem;
+            margin-right: 18px;
+            color: #1e3a8a;
         }
 
         .category-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 4px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3a8a;
         }
 
         .tool-links {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
+            flex-grow: 1;
         }
 
         .tool-link {
             display: flex;
             align-items: center;
-            padding: 12px 16px;
-            background: #f8fafc;
-            border-radius: 8px;
+            padding: 14px 18px;
+            background: white;
+            border-radius: 10px;
             text-decoration: none;
             color: #475569;
-            transition: all 0.3s ease;
             border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .tool-link:hover::before {
+            left: 100%;
         }
 
         .tool-link:hover {
-            background: #f1f5f9;
             transform: translateX(8px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            color: #1e293b;
+            border-color: #3b82f6;
+            color: #1e3a8a;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.1);
+        }
+
+        .tool-link-icon {
+            font-size: 1.3rem;
+            margin-right: 15px;
+            color: #3b82f6;
+            flex-shrink: 0;
         }
 
         .tool-link-text {
             flex: 1;
+            min-width: 0;
         }
 
         .tool-link-title {
-            font-weight: 500;
-            color: #1e293b;
-            margin-bottom: 2px;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 3px;
         }
 
         .tool-link-url {
             font-size: 0.85rem;
             color: #64748b;
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .external-icon {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-left: 10px;
+            flex-shrink: 0;
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 24px;
-            margin: 48px 0;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out 2s both;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 2s; }
+        .feature-card:nth-child(2) { animation-delay: 2.2s; }
+        .feature-card:nth-child(3) { animation-delay: 2.4s; }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: translateX(100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(30, 58, 138, 0.1);
+            border-color: #3b82f6;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            animation: wiggle 2s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes wiggle {
+            0%, 7% { transform: rotateZ(0); }
+            15% { transform: rotateZ(-15deg); }
+            20% { transform: rotateZ(10deg); }
+            25% { transform: rotateZ(-10deg); }
+            30% { transform: rotateZ(6deg); }
+            35% { transform: rotateZ(-4deg); }
+            40%, 100% { transform: rotateZ(0); }
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .feature-card:hover .feature-title {
+            color: #3b82f6;
+        }
+
+        .feature-text {
+            color: #475569;
+            line-height: 1.6;
         }
 
         .feature-card-link {
             text-decoration: none;
             color: inherit;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 12px;
-            padding: 32px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: block;
             transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-            animation: fadeIn 1s ease-out 2.4s both;
         }
 
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        .feature-card-link:hover {
+            transform: translateY(-5px);
         }
 
-        .feature-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 16px;
+        .feature-link-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: #3b82f6;
         }
 
-        .feature-text {
-            color: #64748b;
-            line-height: 1.6;
+        .feature-card:hover .feature-link-indicator {
+            opacity: 1;
+            transform: scale(1.2);
         }
 
         footer {
@@ -423,55 +580,90 @@
             animation: fadeIn 1s ease-out 2.6s both;
         }
 
-        .contact-info {
-            margin-bottom: 24px;
-        }
-
-        .email {
-            font-size: 1.1rem;
-            color: #1e293b;
-            margin-bottom: 16px;
-        }
-
-        .email a {
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .email a:hover {
-            text-decoration: underline;
-        }
-
-        .social-links {
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 24px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 32px;
         }
 
-        .social-links a {
-            color: #64748b;
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo {
+            height: 48px;
+        }
+
+        .footer-brand-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0a2540;
+        }
+
+        .footer-social {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-social-row {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-social a {
+            color: #0a2540;
             text-decoration: none;
             font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-            background: #f1f5f9;
+            font-size: 1.1rem;
+            transition: color 0.2s;
         }
 
-        .social-links a:hover {
-            background: #e2e8f0;
-            color: #1e293b;
-            transform: translateY(-2px);
+        .footer-social a:hover {
+            color: #20e3d2;
         }
 
-        footer p {
+        .footer-qr {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .footer-qr-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            border: 2px solid #20e3d2;
+            background: #fff;
+        }
+
+        .footer-qr-label {
+            font-size: 0.95rem;
+            color: #0a2540;
+            margin-top: 2px;
+        }
+
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
             color: #64748b;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            margin-top: 24px;
         }
 
-        /* Scroll animations */
+        /* Scroll-triggered animations */
         .scroll-animate {
             opacity: 0;
             transform: translateY(30px);
@@ -483,66 +675,82 @@
             transform: translateY(0);
         }
 
-        /* Responsive design */
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #1e40af 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 1s ease-out 2s forwards;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(219, 234, 254, 0.3);
+            border-top: 5px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
         @media (max-width: 768px) {
-            .container {
-                padding: 16px;
-            }
-
-            .main-content {
-                padding: 24px;
-            }
-
-            .welcome-title {
-                font-size: 2.2rem;
-            }
-
             .logo {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
-
+            
+            .welcome-title {
+                font-size: 2rem;
+            }
+            
+            .main-content {
+                padding: 20px;
+            }
+            
+            .features-grid,
             .tools-grid {
                 grid-template-columns: 1fr;
             }
 
-            .tools-grid.special-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .social-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 12px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .welcome-title {
+            .tools-title {
                 font-size: 1.8rem;
-            }
-
-            .logo {
-                font-size: 1.8rem;
-            }
-
-            .main-content {
-                padding: 16px;
-            }
-
-            .tool-category {
-                padding: 16px;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Loading screen -->
+    <div class="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Floating background elements -->
     <div class="floating-bg"></div>
     <div class="floating-bg"></div>
     <div class="floating-bg"></div>
+
+    <!-- Add id to SVG card container at the top -->
+    <div id="top-card" style="width:100%;max-width:1280px;margin:0 auto;">
+        <object type="image/svg+xml" data="assets/social-preview.svg" style="width:100%;height:auto;display:block;"></object>
+        <h1 style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Daisy Lee Social Preview Card</h1>
+    </div>
 
     <div class="container">
         <header>
@@ -552,7 +760,7 @@
 
         <div class="main-content">
             <div class="welcome-section">
-                <h1 class="welcome-title">Welcome to DaisyLee</h1>
+                <h1 class="welcome-title">Welcome to Daisy Lee Space</h1>
                 <p class="welcome-text">
                     Discover cutting-edge solutions and innovative technologies that drive success. 
                     We partner with industry leaders to bring you the best in payment solutions and beyond.
@@ -560,41 +768,40 @@
             </div>
 
             <div class="idtech-section">
-                <div class="idtech-content">
-                    <h2 class="idtech-title">Featured Partner: ID TECH</h2>
-                    <p class="idtech-description">
-                        Explore world-class integrated payment solutions for any industry and any environment. 
-                        ID TECH builds reliable hardware and software services for the most demanding applications.
-                    </p>
-                    <a href="https://www.idtechproducts.com" target="_blank" class="idtech-link">
-                        Visit ID TECH Products →
-                    </a>
-                </div>
+                <h2 class="idtech-title">Featured Partner: ID TECH</h2>
+                <p class="idtech-description">
+                    Explore world-class integrated payment solutions for any industry and any environment. 
+                    ID TECH builds reliable hardware and software services for the most demanding applications.
+                </p>
+                <a href="https://idtechproducts.com/" target="_blank" class="idtech-link">
+                    Visit ID TECH Products →
+                </a>
             </div>
 
+            <!-- Frequently Used Tools Section -->
             <div class="tools-section">
-                <h2 class="section-title">Frequently Used Tools</h2>
+                <h2 class="tools-title">Frequently Used Tools</h2>
                 
-                <div class="tools-grid special-layout">
+                <div class="tools-grid">
                     <!-- Production Solutions -->
-                    <div class="tool-category" id="production-section">
+                    <div class="tool-category">
                         <div class="category-header">
-                            <div class="category-title">Production Solutions</div>
+                            <div class="category-title">🏭 Production Solutions</div>
                         </div>
                         <div class="tool-links">
-                            <a href="https://www.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://idtechproducts.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">ID TECH Main Website</div>
                                     <div class="tool-link-url">idtechproducts.com</div>
                                 </div>
                             </a>
-                            <a href="https://idtechproducts.atlassian.net/wiki" target="_blank" class="tool-link">
+                            <a href="https://idtechproducts.atlassian.net/wiki/spaces/KB/overview" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">ID TECH Knowledge Base</div>
                                     <div class="tool-link-url">idtechproducts.atlassian.net/wiki</div>
                                 </div>
                             </a>
-                            <a href="https://rdm.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://rdm.idtechproducts.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">RDM Production</div>
                                     <div class="tool-link-url">rdm.idtechproducts.com</div>
@@ -606,13 +813,13 @@
                                     <div class="tool-link-url">portal.itsco.net/v2</div>
                                 </div>
                             </a>
-                            <a href="https://marketplace.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://marketplace.idtechproducts.com/#/otp" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Shopping Portal</div>
                                     <div class="tool-link-url">marketplace.idtechproducts.com</div>
                                 </div>
                             </a>
-                            <a href="https://portal.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://portal.idtechproducts.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Status Page</div>
                                     <div class="tool-link-url">portal.idtechproducts.com</div>
@@ -622,9 +829,9 @@
                     </div>
 
                     <!-- Business & Design -->
-                    <div class="tool-category" id="business-section">
+                    <div class="tool-category">
                         <div class="category-header">
-                            <div class="category-title">Business & Design</div>
+                            <div class="category-title">🎨 Business & Design</div>
                         </div>
                         <div class="tool-links">
                             <a href="https://idtechproducts.atlassian.net/jira/dashboards/10817" target="_blank" class="tool-link">
@@ -639,31 +846,31 @@
                                     <div class="tool-link-url">timeanddate.com/worldclock/meeting</div>
                                 </div>
                             </a>
-                            <a href="https://www.figma.com" target="_blank" class="tool-link">
+                            <a href="https://www.figma.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Figma</div>
                                     <div class="tool-link-url">figma.com</div>
                                 </div>
                             </a>
-                            <a href="https://www.canva.com" target="_blank" class="tool-link">
+                            <a href="https://www.canva.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Canva</div>
                                     <div class="tool-link-url">canva.com</div>
                                 </div>
                             </a>
-                            <a href="https://mermaid.js.org" target="_blank" class="tool-link">
+                            <a href="https://mermaid.js.org/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Mermaid</div>
                                     <div class="tool-link-url">mermaid.js.org</div>
                                 </div>
                             </a>
-                            <a href="https://outlook.office365.com/mail" target="_blank" class="tool-link">
+                            <a href="https://outlook.office365.com/mail/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Office 365</div>
                                     <div class="tool-link-url">outlook.office365.com/mail</div>
                                 </div>
                             </a>
-                            <a href="https://workforcenow.adp.com" target="_blank" class="tool-link">
+                            <a href="https://workforcenow.adp.com/theme/index.html#/home" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">ADP</div>
                                     <div class="tool-link-url">workforcenow.adp.com</div>
@@ -673,32 +880,32 @@
                     </div>
                 </div>
 
-                <div class="tools-grid">
+                <div class="tools-grid-special">
                     <!-- Development & Testing -->
-                    <div class="tool-category" id="development-section">
+                    <div class="tool-category">
                         <div class="category-header">
-                            <div class="category-title">Development & Testing</div>
+                            <div class="category-title">🧑‍💻 Development & Testing</div>
                         </div>
                         <div class="tool-links">
-                            <a href="https://uat.rdm.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://uat.rdm.idtechproducts.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">RDM UAT Environment</div>
                                     <div class="tool-link-url">uat.rdm.idtechproducts.com</div>
                                 </div>
                             </a>
-                            <a href="https://admin.dev.rki.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://admin.dev.rki.idtechproducts.com/login" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">RKI Dev Portal</div>
                                     <div class="tool-link-url">admin.dev.rki.idtechproducts.com</div>
                                 </div>
                             </a>
-                            <a href="https://portal-uat.itscocloud.com" target="_blank" class="tool-link">
+                            <a href="https://portal-uat.itscocloud.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">PAE Portal (UAT)</div>
                                     <div class="tool-link-url">portal-uat.itscocloud.com</div>
                                 </div>
                             </a>
-                            <a href="https://mail.tm/en" target="_blank" class="tool-link">
+                            <a href="https://mail.tm/en/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Temp Mail</div>
                                     <div class="tool-link-url">mail.tm/en</div>
@@ -720,42 +927,42 @@
                     </div>
 
                     <!-- Backoffice -->
-                    <div class="tool-category" id="backoffice-section">
+                    <div class="tool-category">
                         <div class="category-header">
-                            <div class="category-title">Backoffice</div>
+                            <div class="category-title">🏢 Backoffice</div>
                         </div>
                         <div class="tool-links">
-                            <a href="https://app.bom.com" target="_blank" class="tool-link">
+                            <a href="https://app.bom.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Arena BOM</div>
                                     <div class="tool-link-url">app.bom.com</div>
                                 </div>
                             </a>
-                            <a href="https://idtechproducts.atlassian.net/jira" target="_blank" class="tool-link">
+                            <a href="https://idtechproducts.atlassian.net/jira/software/c/projects/SOFD/boards/128/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Device Management & Enablement</div>
                                     <div class="tool-link-url">idtechproducts.atlassian.net/jira</div>
                                 </div>
                             </a>
-                            <a href="https://idtechproducts.atlassian.net/wiki" target="_blank" class="tool-link">
+                            <a href="https://idtechproducts.atlassian.net/wiki/spaces/PMH/pages/71458633/Remote+Device+Management+RDM" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Software Product Documentation</div>
                                     <div class="tool-link-url">idtechproducts.atlassian.net/wiki</div>
                                 </div>
                             </a>
-                            <a href="https://adminportal.idtechproducts.com" target="_blank" class="tool-link">
+                            <a href="https://adminportal.idtechproducts.com/login.asp" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">ID TECH Admin Portal</div>
                                     <div class="tool-link-url">adminportal.idtechproducts.com</div>
                                 </div>
                             </a>
-                            <a href="https://trello.com/b/vV7DNpsv/id-tech" target="_blank" class="tool-link">
+                            <a href="https://trello.com/b/vV7DNpsv/id-tech?completedInviteSignup=1" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">CRM Integration</div>
                                     <div class="tool-link-url">trello.com/b/vV7DNpsv/id-tech</div>
                                 </div>
                             </a>
-                            <a href="https://login.salesforce.com" target="_blank" class="tool-link">
+                            <a href="https://login.salesforce.com/" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">Salesforce Marketing Cloud</div>
                                     <div class="tool-link-url">login.salesforce.com</div>
@@ -763,14 +970,17 @@
                             </a>
                         </div>
                     </div>
+                </div>
+
+                <div class="tools-grid">
 
                     <!-- 3rd Party Integrations -->
                     <div class="tool-category" id="integrations-section">
                         <div class="category-header">
-                            <div class="category-title">3rd Party Integrations</div>
+                            <div class="category-title">🔗 3rd Party Integrations</div>
                         </div>
                         <div class="tool-links">
-                            <a href="https://support.bigcommerce.com" target="_blank" class="tool-link">
+                            <a href="https://support.bigcommerce.com/s/?language=en_US" target="_blank" class="tool-link">
                                 <div class="tool-link-text">
                                     <div class="tool-link-title">E-Commerce</div>
                                     <div class="tool-link-url">support.bigcommerce.com</div>
@@ -818,7 +1028,7 @@
                     <!-- Governance, Risk & Compliance -->
                     <div class="tool-category" id="governance-section">
                         <div class="category-header">
-                            <div class="category-title">Governance, Risk & Compliance</div>
+                            <div class="category-title">🛡️ Governance, Risk & Compliance</div>
                         </div>
                         <div class="tool-links">
                             <a href="https://listings.pcisecuritystandards.org/assessors_and_solutions/pin_transaction_devices?agree=true" target="_blank" class="tool-link">
@@ -845,22 +1055,22 @@
             </div>
 
             <div class="features-grid">
-                <a href="https://portal-uat.itscocloud.com/" target="_blank" class="feature-card-link">
-                    <div class="feature-card">
-                        <h3 class="feature-title">Payment Solutions</h3>
-                        <p class="feature-text">
-                            Cutting-edge payment technology for modern businesses, including contactless readers, 
-                            mobile payment devices, and secure transaction processing.
-                        </p>
-                    </div>
-                </a>
-
                 <a href="https://www.worldpay.com/en-GB/products/safer-payments" target="_blank" class="feature-card-link">
                     <div class="feature-card">
                         <h3 class="feature-title">Security First</h3>
                         <p class="feature-text">
                             Enterprise-grade security with EMV certification and advanced encryption 
                             to protect your business and customers.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="https://portal-uat.itscocloud.com/" target="_blank" class="feature-card-link">
+                    <div class="feature-card">
+                        <h3 class="feature-title">Payment Solutions</h3>
+                        <p class="feature-text">
+                            Cutting-edge payment technology for modern businesses, including contactless readers, 
+                            mobile payment devices, and secure transaction processing.
                         </p>
                     </div>
                 </a>
@@ -877,17 +1087,54 @@
             </div>
         </div>
 
-        <footer>
-            <div class="contact-info">
-                <p class="email"><a href="mailto:daisy.li@idtechproducts.com">daisy.li@idtechproducts.com</a></p>
+        <footer id="contact">
+            <div class="footer-content">
+                <div class="footer-brand" style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                    <a href="#top-card" style="display:flex;flex-direction:column;align-items:center;text-decoration:none;">
+                        <img src="assets/logo.svg" alt="Daisy Lee Logo" class="footer-logo" />
+                        <span class="footer-brand-name" style="font-size:1.2rem;font-weight:700;color:#1e293b;margin-top:8px;">Daisy Lee</span>
+                    </a>
+                </div>
+                <div class="footer-social">
+                    <div class="footer-social-row">
+                        <a href="https://x.com/daisyxlee1" target="_blank" title="X" style="vertical-align:middle;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M22.46 5.924c-.793.352-1.645.59-2.54.698a4.48 4.48 0 0 0 1.965-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 11.08 9.03c0 .352.04.695.116 1.022C7.728 9.91 4.1 8.1 1.67 5.149a4.48 4.48 0 0 0-.607 2.254c0 1.555.792 2.927 2.002 3.732a4.48 4.48 0 0 1-2.03-.561v.057a4.48 4.48 0 0 0 3.6 4.393c-.193.053-.397.082-.607.082-.148 0-.292-.014-.432-.04a4.48 4.48 0 0 0 4.18 3.11A8.98 8.98 0 0 1 2 19.54a12.68 12.68 0 0 0 6.88 2.017c8.26 0 12.78-6.84 12.78-12.77 0-.195-.004-.39-.013-.583A9.18 9.18 0 0 0 24 4.59a8.98 8.98 0 0 1-2.54.698z" fill="#1DA1F2"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/daisy.x.li/" target="_blank" title="Facebook" style="vertical-align:middle;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0" fill="#1877F3"/><path d="M16.671 24v-9.294h3.12l.467-3.622h-3.587V8.771c0-1.048.293-1.763 1.797-1.763l1.918-.001v-3.24c-.334-.044-1.472-.143-2.797-.143-2.766 0-4.659 1.688-4.659 4.788v2.13H9.692v3.622h3.128V24h3.851z" fill="#fff"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@daisyxli" target="_blank" title="YouTube" style="vertical-align:middle;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M23.498 6.186a2.997 2.997 0 0 0-2.112-2.12C19.37 3.5 12 3.5 12 3.5s-7.37 0-9.386.566A2.997 2.997 0 0 0 .502 6.186C0 8.2 0 12 0 12s0 3.8.502 5.814a2.997 2.997 0 0 0 2.112 2.12C4.63 20.5 12 20.5 12 20.5s7.37 0 9.386-.566a2.997 2.997 0 0 0 2.112-2.12C24 15.8 24 12 24 12s0-3.8-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" fill="#FF0000"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/daisyxlee_ig/" target="_blank" title="Instagram" style="vertical-align:middle;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm6 1.25a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" fill="#E1306C"/></svg>
+                        </a>
+                        <a href="https://github.com/Daisyxlee" target="_blank" title="GitHub" style="vertical-align:middle;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.748-1.025 2.748-1.025.546 1.378.202 2.397.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .267.18.577.688.479C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z" fill="#181717"/></svg>
+                        </a>
+                    </div>
+                    <div class="footer-social-row" style="margin-left:-32px;">
+                        <a href="mailto:daisyxlee@gmail.com" title="Gmail" style="vertical-align:middle;margin-left:40px;">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.01-8-5.01V6h16zm-16 12V8.489l7.445 4.653a1 1 0 0 0 1.11 0L20 8.489V18H4z" fill="#EA4335"/></svg>
+                        </a>
+                        <a href="mailto:daisy.li@idtechproducts.com" title="Work Email" style="vertical-align:middle;">
+                            <span style="display:inline-block;background:#222;padding:6px 10px;border-radius:10px;max-width:56px;max-height:48px;vertical-align:middle;">
+                                <img src="https://idtechproducts.com/wp-content/uploads/2023/08/IDTECH_white_logo_noglobe.webp" alt="ID TECH Logo" style="display:block;max-width:48px;max-height:36px;width:auto;height:auto;" />
+                            </span>
+                        </a>
+                        <a href="mailto:daisy.li@district1toastmasters.org" title="Toastmasters Contact" style="vertical-align:middle;margin-left:-24px;">
+                            <span style="display:inline-block;padding:6px 10px;border-radius:10px;max-width:70px;max-height:56px;vertical-align:middle;">
+                                <img src="https://www.liblogo.com/img-logo/to2305te79-toastmasters-logo-toastmasters-international-logo-and-design-elements.png" alt="Toastmasters Logo" style="display:block;max-width:60px;max-height:48px;width:auto;height:auto;" />
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-qr">
+                    <img src="assets/linkedin-qr.png" alt="LinkedIn QR Code" class="footer-qr-img" />
+                    <span class="footer-qr-label">Scan to connect on <a href="https://www.linkedin.com/in/daisy-x-li/" target="_blank" style="color:#0a66c2;font-weight:bold;text-decoration:underline;">LinkedIn</a></span>
+                </div>
+                <p class="footer-copyright">&copy; 2024 Daisy Lee. All rights reserved.</p>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/daisy-x-li/" target="_blank" title="LinkedIn">LinkedIn</a>
-                <a href="https://x.com/daisyxlee1" target="_blank" title="Twitter">Twitter</a>
-                <a href="https://www.youtube.com/@daisyxli" target="_blank" title="YouTube">YouTube</a>
-                <a href="mailto:daisy.li@idtechproducts.com" title="Email">Email</a>
-            </div>
-            <p>&copy; 2024 DaisyLee.com. All rights reserved.</p>
         </footer>
     </div>
 
