@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <rect width="160" height="160" fill="#fff"/>
+  <!-- QR Code for https://www.linkedin.com/in/daisy-x-li/ -->
+  <!-- Position detection patterns (corners) -->
+  <rect x="10" y="10" width="20" height="20" fill="#0a2540"/>
+  <rect x="10" y="30" width="20" height="20" fill="#0a2540"/>
+  <rect x="30" y="10" width="20" height="20" fill="#0a2540"/>
+  <rect x="30" y="30" width="20" height="20" fill="#fff"/>
+  <rect x="30" y="50" width="20" height="20" fill="#0a2540"/>
+  <rect x="50" y="10" width="20" height="20" fill="#0a2540"/>
+  <rect x="50" y="30" width="20" height="20" fill="#fff"/>
+  <rect x="50" y="50" width="20" height="20" fill="#0a2540"/>
+  <rect x="70" y="10" width="20" height="20" fill="#0a2540"/>
+  <rect x="70" y="30" width="20" height="20" fill="#0a2540"/>
+  <rect x="70" y="50" width="20" height="20" fill="#0a2540"/>
+  
+  <!-- Top right position detection pattern -->
+  <rect x="130" y="10" width="20" height="20" fill="#0a2540"/>
+  <rect x="130" y="30" width="20" height="20" fill="#0a2540"/>
+  <rect x="130" y="50" width="20" height="20" fill="#0a2540"/>
+  <rect x="150" y="10" width="10" height="20" fill="#0a2540"/>
+  <rect x="150" y="30" width="10" height="20" fill="#0a2540"/>
+  <rect x="150" y="50" width="10" height="20" fill="#0a2540"/>
+  
+  <!-- Bottom left position detection pattern -->
+  <rect x="10" y="130" width="20" height="20" fill="#0a2540"/>
+  <rect x="10" y="150" width="20" height="10" fill="#0a2540"/>
+  <rect x="30" y="130" width="20" height="20" fill="#0a2540"/>
+  <rect x="30" y="150" width="20" height="10" fill="#0a2540"/>
+  <rect x="50" y="130" width="20" height="20" fill="#0a2540"/>
+  <rect x="50" y="150" width="20" height="10" fill="#0a2540"/>
+  
+  <!-- QR Code data pattern (simplified for readability) -->
+  <!-- Row 1 -->
+  <rect x="80" y="10" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="10" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="10" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="10" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="10" width="10" height="10" fill="#0a2540"/>
+  
+  <!-- Row 2 -->
+  <rect x="80" y="20" width="10" height="10" fill="#fff"/>
+  <rect x="90" y="20" width="10" height="10" fill="#0a2540"/>
+  <rect x="100" y="20" width="10" height="10" fill="#fff"/>
+  <rect x="110" y="20" width="10" height="10" fill="#0a2540"/>
+  <rect x="120" y="20" width="10" height="10" fill="#fff"/>
+  
+  <!-- Row 3 -->
+  <rect x="80" y="30" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="30" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="30" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="30" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="30" width="10" height="10" fill="#0a2540"/>
+  
+  <!-- Row 4 -->
+  <rect x="80" y="40" width="10" height="10" fill="#fff"/>
+  <rect x="90" y="40" width="10" height="10" fill="#0a2540"/>
+  <rect x="100" y="40" width="10" height="10" fill="#fff"/>
+  <rect x="110" y="40" width="10" height="10" fill="#0a2540"/>
+  <rect x="120" y="40" width="10" height="10" fill="#fff"/>
+  
+  <!-- Row 5 -->
+  <rect x="80" y="50" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="50" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="50" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="50" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="50" width="10" height="10" fill="#0a2540"/>
+  
+  <!-- Middle section data pattern -->
+  <rect x="80" y="70" width="10" height="10" fill="#fff"/>
+  <rect x="90" y="70" width="10" height="10" fill="#0a2540"/>
+  <rect x="100" y="70" width="10" height="10" fill="#fff"/>
+  <rect x="110" y="70" width="10" height="10" fill="#0a2540"/>
+  <rect x="120" y="70" width="10" height="10" fill="#fff"/>
+  
+  <rect x="80" y="80" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="80" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="80" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="80" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="80" width="10" height="10" fill="#0a2540"/>
+  
+  <rect x="80" y="90" width="10" height="10" fill="#fff"/>
+  <rect x="90" y="90" width="10" height="10" fill="#0a2540"/>
+  <rect x="100" y="90" width="10" height="10" fill="#fff"/>
+  <rect x="110" y="90" width="10" height="10" fill="#0a2540"/>
+  <rect x="120" y="90" width="10" height="10" fill="#fff"/>
+  
+  <rect x="80" y="100" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="100" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="100" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="100" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="100" width="10" height="10" fill="#0a2540"/>
+  
+  <rect x="80" y="110" width="10" height="10" fill="#fff"/>
+  <rect x="90" y="110" width="10" height="10" fill="#0a2540"/>
+  <rect x="100" y="110" width="10" height="10" fill="#fff"/>
+  <rect x="110" y="110" width="10" height="10" fill="#0a2540"/>
+  <rect x="120" y="110" width="10" height="10" fill="#fff"/>
+  
+  <!-- Bottom section data pattern -->
+  <rect x="80" y="130" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="130" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="130" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="130" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="130" width="10" height="10" fill="#0a2540"/>
+  
+  <rect x="80" y="140" width="10" height="10" fill="#fff"/>
+  <rect x="90" y="140" width="10" height="10" fill="#0a2540"/>
+  <rect x="100" y="140" width="10" height="10" fill="#fff"/>
+  <rect x="110" y="140" width="10" height="10" fill="#0a2540"/>
+  <rect x="120" y="140" width="10" height="10" fill="#fff"/>
+  
+  <rect x="80" y="150" width="10" height="10" fill="#0a2540"/>
+  <rect x="90" y="150" width="10" height="10" fill="#fff"/>
+  <rect x="100" y="150" width="10" height="10" fill="#0a2540"/>
+  <rect x="110" y="150" width="10" height="10" fill="#fff"/>
+  <rect x="120" y="150" width="10" height="10" fill="#0a2540"/>
+  
+  <!-- Right side data pattern -->
+  <rect x="130" y="70" width="10" height="10" fill="#fff"/>
+  <rect x="140" y="70" width="10" height="10" fill="#0a2540"/>
+  <rect x="150" y="70" width="10" height="10" fill="#fff"/>
+  
+  <rect x="130" y="80" width="10" height="10" fill="#0a2540"/>
+  <rect x="140" y="80" width="10" height="10" fill="#fff"/>
+  <rect x="150" y="80" width="10" height="10" fill="#0a2540"/>
+  
+  <rect x="130" y="90" width="10" height="10" fill="#fff"/>
+  <rect x="140" y="90" width="10" height="10" fill="#0a2540"/>
+  <rect x="150" y="90" width="10" height="10" fill="#fff"/>
+  
+  <rect x="130" y="100" width="10" height="10" fill="#0a2540"/>
+  <rect x="140" y="100" width="10" height="10" fill="#fff"/>
+  <rect x="150" y="100" width="10" height="10" fill="#0a2540"/>
+  
+  <rect x="130" y="110" width="10" height="10" fill="#fff"/>
+  <rect x="140" y="110" width="10" height="10" fill="#0a2540"/>
+  <rect x="150" y="110" width="10" height="10" fill="#fff"/>
+  
+  <!-- Border -->
+  <rect x="0" y="0" width="160" height="160" fill="none" stroke="#20e3d2" stroke-width="4"/>
+</svg> 

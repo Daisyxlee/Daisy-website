@@ -1,0 +1,58 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0a2540"/>
+      <stop offset="1" stop-color="#20e3d2"/>
+    </linearGradient>
+    <radialGradient id="daisy-center" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="100%" stop-color="#ffd700"/>
+    </radialGradient>
+    <style type="text/css">
+      .headline { font-family: 'Inter', 'SF Pro', Arial, sans-serif; font-size: 96px; font-weight: 900; fill: #ffffff; letter-spacing: -3px; text-anchor: middle; }
+      .subheadline { font-family: 'Inter', 'SF Pro', Arial, sans-serif; font-size: 32px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+      .skills { font-family: 'Inter', 'SF Pro', Arial, sans-serif; font-size: 24px; font-weight: 700; fill: #ffffff; text-anchor: middle; }
+    </style>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg-gradient)"/>
+  <!-- Floating tech icons -->
+  <circle cx="120" cy="540" r="40" fill="#20e3d2" fill-opacity="0.10"/>
+  <rect x="1100" y="80" width="60" height="60" rx="12" fill="#fff" fill-opacity="0.08"/>
+  <polygon points="200,100 240,180 160,180" fill="#fff" fill-opacity="0.08"/>
+  <ellipse cx="1000" cy="500" rx="48" ry="24" fill="#20e3d2" fill-opacity="0.08"/>
+  <!-- Daisy flower background behind logo -->
+  <g transform="translate(40,32) scale(2.0)">
+    <!-- Daisy petals -->
+    <g opacity="0.18">
+      <ellipse cx="48" cy="48" rx="36" ry="12" fill="#fff" transform="rotate(0 48 48)"/>
+      <ellipse cx="48" cy="48" rx="36" ry="12" fill="#fff" transform="rotate(30 48 48)"/>
+      <ellipse cx="48" cy="48" rx="36" ry="12" fill="#fff" transform="rotate(60 48 48)"/>
+      <ellipse cx="48" cy="48" rx="36" ry="12" fill="#fff" transform="rotate(90 48 48)"/>
+      <ellipse cx="48" cy="48" rx="36" ry="12" fill="#fff" transform="rotate(120 48 48)"/>
+      <ellipse cx="48" cy="48" rx="36" ry="12" fill="#fff" transform="rotate(150 48 48)"/>
+    </g>
+    <!-- Daisy center -->
+    <circle cx="48" cy="48" r="14" fill="url(#daisy-center)" opacity="0.35"/>
+    <!-- DL logo on top -->
+    <rect width="96" height="96" rx="24" fill="url(#bg-gradient)"/>
+    <!-- Highlight circles behind D and L, center-aligned with DL -->
+    <circle cx="36" cy="60" r="18" fill="#20e3d2" fill-opacity="0.25"/>
+    <circle cx="60" cy="60" r="18" fill="#ffe066" fill-opacity="0.25"/>
+    <text x="18" y="68" font-family="Inter, 'SF Pro', Arial, sans-serif" font-size="48" font-weight="bold" fill="#fff" letter-spacing="-2">D</text>
+    <text x="52" y="68" font-family="Inter, 'SF Pro', Arial, sans-serif" font-size="48" font-weight="bold" fill="#fff" letter-spacing="-2">L</text>
+    <!-- Small labels for D and L, 'Dynamic' moved even further left -->
+    <text x="6" y="98" font-family="Inter, 'SF Pro', Arial, sans-serif" font-size="12" font-weight="bold" fill="#20e3d2">Dynamic</text>
+    <text x="58" y="98" font-family="Inter, 'SF Pro', Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffe066">Leader</text>
+    <rect x="12" y="12" width="72" height="72" rx="16" fill="none" stroke="#fff" stroke-width="2" opacity="0.15"/>
+  </g>
+  <!-- Headline larger and lower, centered -->
+  <text x="640" y="200" class="headline">Daisy Lee</text>
+  <!-- Updated subheadline wrapped, centered -->
+  <text x="640" y="270" class="subheadline"><tspan font-weight="bold" fill="#20e3d2">D</tspan>ynamic <tspan font-weight="bold" fill="#ffe066">L</tspan>eader transforming</text>
+  <text x="640" y="310" class="subheadline">complex digital challenges into user-driven solutions</text>
+  <text x="640" y="350" class="subheadline">across fintech, payments, e-commerce, and enterprise platforms.</text>
+  <!-- Skills wrapped, moved down -->
+  <text x="640" y="420" class="skills">Digital Strategy · AI Strategy &amp; Adoption · Data-Informed Decision Making</text>
+  <text x="640" y="455" class="skills">Agile Methodologies · User Experience · Process Improvement</text>
+  <text x="640" y="490" class="skills">Workflow Automation · API Integration · Security &amp; Compliance</text>
+</svg> 
